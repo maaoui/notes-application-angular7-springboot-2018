@@ -1,0 +1,12 @@
+
+<span class="my-pallete" (click)="showModal()">
+    <i class="fas fa-user-plus"></i>
+  </span>
+
+  <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+      <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Select a person" [(ngModel)]="selectedValue">
+        <div *ngFor="let item of data">
+        <nz-option nzLabel="{{ item.username }}" nzValue="{{ item.id }}"></nz-option>
+         </div>
+        </nz-select>
+  </nz-modal>

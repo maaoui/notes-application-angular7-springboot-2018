@@ -1,0 +1,25 @@
+<div class="row">
+<div class="my-form col-md-3">
+<form nz-form>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="email">subject</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input [(ngModel)]="subject"  nz-input name="subject" type="subject" id="subject">
+    </nz-form-control>
+  </nz-form-item >
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="mailcontent">mail content</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+        <textarea [(ngModel)]="mytext" name="mytext" nz-input rows="4" placeholder="write any thing"></textarea>
+    </nz-form-control>
+  </nz-form-item >
+  <div class="my-send-btn">
+  <button  nz-button nzType="default" (click)="onAddFeedback()">Send</button>
+  </div>
+</form>
+</div>
+  <div class="image-feedback">
+    <img class="myimage" src='http://www.stthomas.org.uk/s/cc_images/teaserbox_2469594490.png?t=1473676637' alt="">
+  </div>
+</div>

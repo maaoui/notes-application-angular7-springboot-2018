@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="my-header-elements">
+
+  <div class="my-header-logo">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+      <i class="fas fa-sticky-note myicon"></i>
+      <span class="my-logo-text"> Note IT </span>
+    </a>
+  <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+    <button mat-button color="warn" class="my-routing-btn">features</button>
+  </a>
+  <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+    <button mat-button color="warn" class="my-routing-btn">about</button>
+  </a>
+
+  </div>
+  <div>
+
+  </div>
+  <div class="my-header-buttons">
+
+      <app-register class="my-register-btw"></app-register>
+      <app-login class="my-login-btw"></app-login>
+  </div>
+

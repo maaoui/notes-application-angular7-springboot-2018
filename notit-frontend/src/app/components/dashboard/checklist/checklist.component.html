@@ -1,0 +1,49 @@
+<div class="container-fluid my-checklist">
+  <div class="row">
+    <div class="col my-todolist-up">
+
+      <div class="todolist-date">
+          <div class="day">{{now |date:'EEEE'}}  ,   {{now |date:'d'}} </div>
+          <div class="month">{{now |date:'LLLL'}}</div>
+        </div>
+        <div class="todoolist-numbers">
+          <div class="total">
+            <div>0</div>
+            <div>total</div>
+          </div>
+          <div class="remaining">
+            <div>0</div>
+            <div>Remaining</div>
+          </div>
+          <div class="done">
+            <div>0</div>
+            <div>done</div>
+          </div>
+        </div>
+    </div>
+  </div>
+    <div class="row my-todolist-down">
+      <div class="col">
+          <p class="today2"><strong>Tasks</strong> for today</p>
+      </div>
+    </div>
+      <!-- <div class="row">
+        <ul>
+          <li class="col lihiden">
+
+              <a href="" class="check_button" onmousedown="return false">
+                <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+              </a>
+              <div class="right">
+                <p contenteditable="true">Buy milk</p>
+              </div>
+              <span class="delete_button" onmousedown='return false'>
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+              </span>
+            </li>
+        </ul>
+
+      </div> -->
+      <app-listoftasks></app-listoftasks>
+
+</div>

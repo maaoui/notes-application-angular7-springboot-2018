@@ -1,0 +1,55 @@
+<mat-toolbar color="primary" class="my-header-elements">
+
+  <div class="my-header-logo">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+      <i class="fas fa-sticky-note myicon"></i>
+      <span class="my-logo-text"> Note IT </span>
+    </a>
+    <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >
+      <button mat-button color="warn" class="my-routing-btn">dashboard</button>
+    </a>
+  <a [routerLink]="['/notes']" routerLinkActive="router-link-active" >
+    <button mat-button color="warn" class="my-routing-btn">My Notes</button>
+  </a>
+    <a [routerLink]="['/feedback']" routerLinkActive="router-link-active" >
+      <button mat-button color="warn" class="my-routing-btn">feedback</button>
+    </a>
+
+    <a [routerLink]="['/project']" routerLinkActive="router-link-active" >
+      <button mat-button color="warn" class="my-routing-btn">Project</button>
+    </a>
+
+  </div>
+  <div>
+
+  </div>
+  <div class="my-header-buttons">
+      <nz-dropdown>
+          <a nz-dropdown>
+              <!-- <i class="fas fa-bell"></i> -->
+          </a>
+          <!-- <ul nz-menu nzSelectable>
+            <div>
+              <h2>notifications</h2>
+              <img src="" alt="">
+            </div>
+          </ul> -->
+        </nz-dropdown>
+    <nz-dropdown>
+      <a nz-dropdown>
+        <i class="fas fa-user"></i> {{ user.sub }} <i nz-icon type="down"></i>
+      </a>
+      <ul nz-menu nzSelectable>
+        <li nz-menu-item>
+          <a [routerLink]="['/profile']" routerLinkActive="router-link-active">  <i class="far fa-address-card"></i>Profile</a>
+        </li>
+        <li nz-menu-item>
+          <a [routerLink]="['/collaborators']" routerLinkActive="router-link-active"> <i class="fas fa-user-friends"></i> Collaborators </a>
+        </li>
+        <li nz-menu-item>
+          <a (click)="logout()"> <i class="fas fa-sign-out-alt"></i> Deconexion </a>
+        </li>
+      </ul>
+    </nz-dropdown>
+  </div>
+

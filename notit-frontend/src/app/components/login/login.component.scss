@@ -1,0 +1,30 @@
+
+.my-header-elements{
+  display: flex;
+  justify-content: space-between;
+  background-color: #e44232;
+}
+.my-header-buttons{
+  display: flex;
+}
+.my-signup-btn{
+  background-color: whitesmoke;
+  color: black;
+  margin-left: 2em;
+}
+.my-header-btn
+{
+  margin-right: 5% ;
+
+}
+.login-form {
+  max-width: 300px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}

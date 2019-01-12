@@ -1,0 +1,25 @@
+<button mat-raised-button color="accent" (click)="showModal()" class="my-add-notebook-btn">Add notebook</button>
+
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="add Note" [nzFooter]="modalFooter" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <form nz-form>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="noteName">Notebook Name</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input name="notename" type="text"placeholder="write the Note Name"
+           id="noteName" [(ngModel)]="notebookName">
+        </nz-form-control>
+      </nz-form-item >
+
+
+      <ng-template #modalFooter>
+        <button nz-button nzType="default" (click)="handleCancel()">cancel</button>
+        <button nz-button nzType="primary" (click)="handleOk()">add note Book</button>
+      </ng-template>
+    </form>
+
+
+
+
+  </nz-modal>

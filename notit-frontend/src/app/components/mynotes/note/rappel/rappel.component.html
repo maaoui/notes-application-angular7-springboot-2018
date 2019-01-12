@@ -1,0 +1,19 @@
+
+<span class="my-pallete">
+    <i (click)="showModal()"  class="fas fa-bell"></i>
+</span>
+
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="notification for this note" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+
+        <nz-date-picker
+        nzShowTime
+        nzFormat="yyyy-MM-dd HH:mm:ss"
+        nzPlaceHolder="Select Time"
+        (ngModelChange)="onChange($event)"
+        (nzOnOk)="onOk($event)"
+      ></nz-date-picker>
+      <br>
+
+
+
+    </nz-modal>

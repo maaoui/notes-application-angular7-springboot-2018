@@ -1,0 +1,61 @@
+.my-pallete{
+cursor: pointer;
+}
+.my-pallete :hover{
+  color: #007bff;
+ }
+ .colors-picker{
+  display: flex;
+  flex-wrap: wrap;
+  width: 130px;
+  justify-content: space-around;
+}
+.color{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.color:hover{
+ border: solid black 1.5px;
+}
+.color1{
+  background: white;
+  border: 1px grey solid;
+}
+.color2{
+  background: rgb(242, 139, 130);
+}
+.color3{
+  background: rgb(251, 188, 4);
+}
+.color4{
+  background: rgb(255, 244, 117);
+}
+.color5{
+  background: rgb(204, 255, 144);
+}
+.color6{
+  background: rgb(167, 255, 235);
+}
+.color7{
+  background: rgb(203, 240, 248);
+}
+.color8{
+  background: rgb(203, 240, 248);
+}
+.color9{
+  background: rgb(215, 174, 251);
+}
+.color10{
+  background: rgb(253, 207, 232);
+}
+.color11{
+  background: rgb(215, 174, 251);
+}
+.color12{
+  background: rgb(232, 234, 237);
+}
+
+
+

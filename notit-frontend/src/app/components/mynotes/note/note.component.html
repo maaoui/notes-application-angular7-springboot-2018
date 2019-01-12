@@ -1,0 +1,52 @@
+<div *ngFor="let item of filtredDatabybook row" class="all-my-notes">
+<div class="my-note slide-in-fwd-center" [ngStyle]="{'background': item.color}">
+
+  <div class="my-note-header ">
+    <div class="my-delete-button-note">
+        <div class="mynoteuser">
+            <div class="user-info">
+                <nz-avatar nzIcon="anticon anticon-user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>      <div class="myusername">
+             <p>user</p>
+            </div>
+          </div>
+         <div style="margin-left: 60px; clear: both;">
+              <div  nz-popover [nzContent]="contentTemplate" nzPlacement="bottom">
+                 <i class="fas fa-ellipsis-h"></i>
+              </div>
+          </div>
+    </div>
+
+    </div>
+      <input [(ngModel)]="item.title" [ngStyle]="{'background': item.color}" class="my-note-title" type="text" (blur)="changenote(item)">
+  </div>
+  <div class="my-note-text">
+      <textarea #txt [(ngModel)]="item.text" [ngStyle]="{'background': item.color}" (blur)="changenote(item)"></textarea>
+  </div>
+  <div class="last-modified-date">
+    <span> {{ item.lastModifiedOn | date }} </span>
+  </div>
+  <div class="note-options">
+    <app-rappel></app-rappel>
+    <app-addcollaborator></app-addcollaborator>
+    <app-changecolor (messageEvent)="receiveColor($event)" (click)="changeitem(item)"></app-changecolor>
+    <app-addimage></app-addimage>
+    <app-archive></app-archive>
+
+</div>
+  <ng-template #contentTemplate>
+      <div>
+        <div>
+         <button nz-button  (click)="onDeleteNote (item.id)">
+              <i class="far fa-trash-alt" ></i> delete
+         </button>
+        </div>
+      </div>
+    </ng-template>
+</div>
+</div>
+
+<div class="my-not-found-search" *ngIf="filtredDatabybook?.length === 0 ">
+  <h1>there is no search for "{{search}} " </h1>
+</div>
+
+
